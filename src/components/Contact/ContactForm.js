@@ -2,8 +2,19 @@ import emailjs from '@emailjs/browser';
 import React from 'react';
 import '../Contact/Contact.css';
 import { AiOutlineArrowDown } from 'react-icons/ai';
+import { useRef, useEffect } from 'react';
+
 
 export default function Contact() {
+    const messageRef = useRef(null);
+
+    function focusMessage() {
+        messageRef.current.focus();
+    }
+
+    useEffect(() => {
+        focusMessage();
+    }, []);
 
     function sendEmail(e) {
         e.preventDefault();
@@ -49,7 +60,7 @@ export default function Contact() {
                         <input type="text" name="subject" placeholder='What can I help you with?' className='subject' />
                         <input type="text" name="name" placeholder='Jane Doe' className='name' />
                         <input type="email" name="email" placeholder='janedoe@gmail.com' className='email' />
-                        <input type='text' name="message" placeholder='...' className='message' />
+                        <input type='text' dir="ltr" name="message" ref={messageRef} className='message' />
                         <br /> <br />
                         <input type="submit" className="btn__contact" value="Send Message" />
                     </form>

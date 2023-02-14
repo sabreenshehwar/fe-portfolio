@@ -1,7 +1,7 @@
 import { Link as LinkR } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion } from "framer-motion";
-import img from '../../media/waves.jpg';
+import img from '../../media/city.jpg';
 
 
 const animateOpacity = keyframes`
@@ -20,6 +20,8 @@ align-items:center;
 margin: 0 0 10px 0;
 height:100%;
 padding:1rem;
+max-width:100%;
+background-color:#131313;
 background-image: url(${img});
 max-width:100%;
 background-size:contain;
@@ -27,31 +29,33 @@ background-repeat:no-repeat;
 background-attachment:fixed;
 background-position: center center;
 
-
 @media screen and (max-width:768px){
      padding:100px 0;
      height:1100px;
+    background-size:cover;
 
 }
 @media screen and (max-width:480px){
      padding:100px 0;
      height:1300px;
+     background-size:cover;
+
 
 }
 @media screen and (max-width:375px){
      padding:100px 0;
      height:1300px;
+    background-size:cover;
 }
 @media screen and (max-width:320px){
      padding: 180px 0;
      height:1300px;
-
+    background-size:cover;
 }
 `
     ;
 
 export const HeroContent = styled.div`
-background-repeat: no-repeat;
 height:100%;
 max-width:100%;
 z-index:0;
@@ -75,7 +79,6 @@ display:grid;
 grid-auto-columns:minmax(auto,1fr);
 align-items:center;
 grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-
 @media screen and (max-width:768px){
     grid-template-areas:${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
 }
@@ -99,6 +102,7 @@ padding:0 20px;
 z-index:999;
 `
     ;
+
 export const ImgWrap = styled.div`
 max-width:100%;
 height:100%;
@@ -107,7 +111,7 @@ padding:1rem;
     ;
 
 export const Img = styled(motion.img)`
-display: flex;
+display:flex;
 overflow: hidden;
 width:30rem;
 height: 100%;
@@ -119,6 +123,7 @@ filter: brightness(70%);
 @media screen and (max-width:768px){
     height:100%;
     width:20rem;
+    place-content:center;
 }
 @media screen and (max-width:480px){
     font-size:3.5rem;
@@ -173,8 +178,14 @@ export const HeaderWrapper = styled.div`
 max-width:540px;
 padding-bottom: 60px;
 padding:2rem;
-background:#000;
 border-radius:10px;
+/* From https://css.glass */
+background: rgba(0, 0, 0, 0.64);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.7px);
+-webkit-backdrop-filter: blur(6.7px);
+border: 1px solid rgba(0, 0, 0, 0.3);
 }
 `
     ;
@@ -182,13 +193,13 @@ border-radius:10px;
 export const HeaderH1 = styled.h1`
 display:block;
 margin-top: 20px;
-font-size:2rem;
-font-family: 'Nothing You Could Do', cursive;
-text-align: right;
+font-size:2.2rem;
+text-align: left;
 line-height: 1.1;
 font-weight: 500;
 letter-spacing: 1.3px;
-background: #fff;  /* fallback for old browsers */
+background:#fff;
+font-family: 'Nothing You Could Do', cursive;
 -webkit-background-clip: text;
 background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -229,10 +240,6 @@ font-weight:300;
 line-spacing:2px;
 font-family: 'Source Sans Pro', sans-serif;
 
-@media screen and (max-width:768px){
-     
-
-}
 @media screen and (max-width:480px){
     font-size:1.2rem;
 }

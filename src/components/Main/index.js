@@ -18,7 +18,7 @@ const Main = () => {
                     ease: [0, 0.71, 0.2, 1.01]
                 }}>
                 <HeaderP>
-                    Branding | Web Experiences
+                    Branding | Front-End Development
                 </HeaderP>
                 <MainH1>
                     Sabreen Shehwar

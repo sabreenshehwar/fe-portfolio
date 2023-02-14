@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
-import HeroSection from '../components/HeroSection';
-import Contact from '../components/Contact/ContactForm';
-import Experience from '../components/Experience';
 import Info from '../components/Info';
+import HeroSection from '../components/HeroSection';
+import Experience from '../components/Experience';
+import Contact from '../components/Contact/ContactForm';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)

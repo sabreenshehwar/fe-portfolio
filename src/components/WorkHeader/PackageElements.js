@@ -53,7 +53,6 @@ padding: 0 24px;
 justify-content:center;
 z-index:1;
 height:100%;
-overflow:hidden;
 width:100%;
 padding-bottom:30px;
 `

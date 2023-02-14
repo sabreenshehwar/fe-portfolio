@@ -23,16 +23,20 @@ padding-bottom:5rem;
     height:1000px;
 }
 @media screen and (max-width:768px){
-height:700px;
+height:800px;
 padding: 0 30px;
 }
 
 @media screen and (max-width: 480px) {
-height:750px;
+height:800px;
 padding: 0 20px;
 }
 @media screen and (max-width:320px){
-height:600px;
+height:700px;
+padding: 0 20px;
+}
+@media screen and (max-width:320px){
+height:700px;
 padding: 0 20px;
 }
 `

@@ -7,14 +7,36 @@ background:#131313;
 height:100%;
 display:block;
 justify-content:center;
-padding:2rem;
+padding:0 50px;
+padding-top:2rem;
+padding-bottom:2rem;
 background-image: url(${img});
 max-width:100%;
 background-size:cover;
 background-repeat:no-repeat;
-background-attachment:fixed;
+background-attachment:scroll;
 background-position: center center;
-
+ @media screen and (max-width:1440px){
+    height:900px;
+}
+@media screen and (max-width:1024px){
+    height:1000px;
+}
+@media screen and (max-width: 768px){
+    height:1000px;
+}
+@media screen and (max-width:480px){
+    height:2600px;
+}
+@media screen and (max-width:425px){
+    height:1350px;
+}
+@media screen and (max-width:375px){
+    height:1900px;
+}
+@media screen and (max-width:320px){
+    height:1600px;
+}
 `;
 
 export const PrepareH3 = styled.h3`
@@ -57,6 +79,8 @@ border-radius:10px;
 width:30rem;
 height:100%;
 max-width:100%;
+box-shadow: 0 0 5px #870000, 0 0 25px #870000, 0 0 50px #870000, 0 0 50px #870000;
+
 @media screen and (max-width:1024px){
     width:24rem;
     max-width:100%;
